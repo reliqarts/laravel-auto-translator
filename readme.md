@@ -6,7 +6,6 @@ Laravel Automatic Translator, for Laravel 10+
 </p>
 <p align="center">
 <a href="https://github.com/reliqarts/laravel-auto-translator/actions/workflows/test.yml"><img src="https://github.com/reliqarts/laravel-auto-translator/actions/workflows/test.yml/badge.svg" alt="test" /></a>
-<a href="https://scrutinizer-ci.com/g/reliqarts/laravel-auto-translator/"><img src="https://img.shields.io/scrutinizer/g/reliqarts/laravel-auto-translator.svg" alt="Scrutinizer" /></a>
 <a href="https://codecov.io/gh/reliqarts/laravel-auto-translator"><img src="https://img.shields.io/codecov/c/github/reliqarts/laravel-auto-translator.svg" alt="Codecov" /></a>
 <a href="https://packagist.org/packages/reliqarts/laravel-auto-translator"><img src="https://poser.pugx.org/reliqarts/laravel-auto-translator/version" alt="Latest Stable Version" /></a>
 <a href="https://packagist.org/packages/reliqarts/laravel-auto-translator"><img src="https://poser.pugx.org/reliqarts/laravel-auto-translator/license" alt="License" /></a>
