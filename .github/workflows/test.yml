@@ -1,0 +1,51 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix:
+        laravel-version: ['^10.0']
+        preference: ['stable']
+        experimental: [false]
+        php-version: ['8.2']
+        exclude:
+          - laravel-version: ^10.0
+            php-version: 8.0
+    name: Laravel ${{ matrix.laravel-version }} (${{ matrix.preference }}) on PHP ${{ matrix.php-version }}
+    steps:
+      - name: 🛒 Checkout
+        uses: actions/checkout@v3
+      - name: 🛟 Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.composer/cache/files
+          key: deps-${{ runner.os }}-${{ hashFiles('composer.lock') }}
+      - name: 🏏 Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: mbstring, xdebug
+          coverage: xdebug
+      - name: ⛲ Install dependencies
+        run: |
+          composer require --no-update --no-interaction "illuminate/support:${{ matrix.laravel-version }}"
+          composer update --prefer-${{ matrix.preference }} --no-interaction --prefer-dist --no-scripts --optimize-autoloader
+      - name: ❄️ Lint composer.json
+        run: composer validate
+      - name: 🧪 Run Tests
+        run: composer test:ci
+      - name: ☂️ Upload Coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} #required
+          file: ./build/coverage.xml #optional
+          flags: unittests #optional
+          name: codecov-umbrella #optional
+          fail_ci_if_error: true #optional (default = false)
+          verbose: true # optional (default = false)

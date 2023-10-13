@@ -1,0 +1,12 @@
+/build/*
+/vendor
+/node_modules
+!.gitkeep
+.idea
+.vscode
+.DS_Store
+*cache
+composer.lock
+coverage.xml
+tmp
+

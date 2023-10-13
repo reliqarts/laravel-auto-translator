@@ -1,0 +1,8 @@
+grumphp:
+  extensions:
+    - YieldStudio\GrumPHPLaravelPint\ExtensionLoader
+  tasks:
+    laravel_pint:
+      config: pint.json
+      preset: laravel
+    phpunit: null
