@@ -12,10 +12,13 @@ Laravel Automatic Translator, for Laravel 10+
 <a href="https://packagist.org/packages/reliqarts/laravel-auto-translator"><img src="https://poser.pugx.org/reliqarts/laravel-auto-translator/license" alt="License" /></a>
 </p>
 
+This package will scan your application, locate all [translation string keys](https://laravel.com/docs/10.x/localization#using-translation-strings-as-keys) throughout and generate translations 
+based on your configuration.
+
 ## Features
 
 - Simple, easy to schedule artisan command to generate all translations
-- Automatic language file generation
+- Automatic language file generation ([json](https://laravel.com/docs/10.x/localization#using-translation-strings-as-keys))
 - Easy to configure, with support for custom translator implementation
 
 ## Installation
