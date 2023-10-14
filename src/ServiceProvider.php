@@ -6,7 +6,6 @@ namespace ReliqArts\AutoTranslator;
 
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use KKomelin\TranslatableStringExporter\Core\Exporter;
 use LogicException;
@@ -25,7 +24,7 @@ use ReliqArts\Contract\LoggerFactory;
 use ReliqArts\Service\ConfigProvider as ReliqArtsConfigProvider;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 
-final class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
+final class ServiceProvider extends BaseServiceProvider
 {
     /**
      * Register package services.
