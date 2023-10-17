@@ -76,6 +76,6 @@ return [
         /**
          * Message returned from endpoint when language was switched. Set to 'null' to disable.
          */
-        'confirmation_text' => __('Language switched.'),
+        'confirmation_text' => 'Language switched.',
     ],
 ];

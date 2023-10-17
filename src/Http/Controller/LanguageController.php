@@ -35,6 +35,6 @@ class LanguageController
         return $confirmationText === null
             ? redirect()->back()
             : redirect()->back()
-                ->with('message', $confirmationText);
+                ->with('message', __($confirmationText));
     }
 }
