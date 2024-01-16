@@ -9,6 +9,7 @@ Laravel Automatic Translator, for Laravel 10+
 <a href="https://codecov.io/gh/reliqarts/laravel-auto-translator"><img src="https://img.shields.io/codecov/c/github/reliqarts/laravel-auto-translator.svg" alt="Codecov" /></a>
 <a href="https://packagist.org/packages/reliqarts/laravel-auto-translator"><img src="https://poser.pugx.org/reliqarts/laravel-auto-translator/version" alt="Latest Stable Version" /></a>
 <a href="https://packagist.org/packages/reliqarts/laravel-auto-translator"><img src="https://poser.pugx.org/reliqarts/laravel-auto-translator/license" alt="License" /></a>
+<a href="https://codeclimate.com/github/reliqarts/laravel-auto-translator/maintainability"><img src="https://api.codeclimate.com/v1/badges/df5cd2da88ed1b51f6c3/maintainability" /></a>
 </p>
 
 This package will scan your application, locate all [translation string keys](https://laravel.com/docs/10.x/localization#using-translation-strings-as-keys) throughout and generate translations 
