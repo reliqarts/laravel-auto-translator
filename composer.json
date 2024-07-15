@@ -29,23 +29,23 @@
     "require": {
         "php": "^8.2",
         "deeplcom/deepl-php": "^1.5",
-        "illuminate/support": "^8.0|^9.0|^10|^11",
+        "illuminate/support": "^8.0|^9.0|^10|^11.0",
         "kkomelin/laravel-translatable-string-exporter": "^1.21",
-        "reliqarts/laravel-common": "^7.0",
+        "reliqarts/laravel-common": "^7.0|^8.0",
         "stichoza/google-translate-php": "^5.1"
     },
     "require-dev": {
         "laravel/pint": "^1.13",
-        "orchestra/testbench": "^8.12",
+        "orchestra/testbench": "^8.12|^9.2",
         "phpro/grumphp": "^2.0",
         "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.6",
+        "phpunit/phpunit": "^9.6|^11.0",
         "yieldstudio/grumphp-laravel-pint": "^1.0"
     },
     "scripts": {
         "test": "phpunit",
-        "test:ci": "phpunit --coverage-clover=./build/coverage.xml --verbose",
-        "test:unit": "phpunit --testsuite=Unit --coverage-clover=./build/coverage.xml --verbose"
+        "test:ci": "phpunit --coverage-clover=./build/coverage.xml",
+        "test:unit": "phpunit --testsuite=Unit --coverage-clover=./build/coverage.xml"
     },
     "config": {
         "allow-plugins": {

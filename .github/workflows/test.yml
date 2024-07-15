@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       max-parallel: 10
       matrix:
-        laravel-version: ['^10.0']
+        laravel-version: ['^10.0', '^11.0']
         preference: ['stable']
         experimental: [false]
         php-version: ['8.2']
@@ -19,9 +19,9 @@ jobs:
     name: Laravel ${{ matrix.laravel-version }} (${{ matrix.preference }}) on PHP ${{ matrix.php-version }}
     steps:
       - name: 🛒 Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🛟 Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.composer/cache/files
@@ -41,7 +41,7 @@ jobs:
       - name: 🧪 Run Tests
         run: composer test:ci
       - name: ☂️ Upload Coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }} #required
           file: ./build/coverage.xml #optional
