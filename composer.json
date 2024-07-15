@@ -29,9 +29,9 @@
     "require": {
         "php": "^8.2",
         "deeplcom/deepl-php": "^1.5",
-        "illuminate/support": "^8.0|^9.0|^10|^11",
+        "illuminate/support": "^8.0|^9.0|^10|^11.0",
         "kkomelin/laravel-translatable-string-exporter": "^1.21",
-        "reliqarts/laravel-common": "^7.0",
+        "reliqarts/laravel-common": ">=7.0",
         "stichoza/google-translate-php": "^5.1"
     },
     "require-dev": {
