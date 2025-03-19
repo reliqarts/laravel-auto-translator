@@ -22,7 +22,8 @@
     <env name="CACHE_DRIVER" value="array"/>
   </php>
   <logging/>
-  <source>
+  <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
+    <!--  https://docs.phpunit.de/en/11.5/error-handling.html#limiting-issues-to-your-code-->
     <include>
       <directory suffix=".php">src/</directory>
     </include>

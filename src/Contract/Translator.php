@@ -15,7 +15,7 @@ interface Translator
     public function translate(
         string $value,
         LanguageCode|string $targetLanguage,
-        LanguageCode $sourceLanguage = null
+        ?LanguageCode $sourceLanguage = null
     ): Translation;
 
     /**
