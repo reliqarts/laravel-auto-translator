@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @noinspection PhpStrictTypeCheckingInspection
  * @noinspection PhpVoidFunctionResultUsedInspection
@@ -10,6 +11,7 @@ namespace ReliqArts\AutoTranslator\Tests\Unit\Service\Translator;
 
 use Exception;
 use Illuminate\Support\Str;
+use PHPUnit\Framework\Attributes\Medium;
 use Prophecy\Argument;
 use Prophecy\Exception\Doubler\DoubleException;
 use Prophecy\Exception\Prophecy\ObjectProphecyException;
@@ -64,7 +66,7 @@ final class SimpleGoogleApiTranslatorTest extends TestCase
      *
      * @throws Exception
      */
-    public function testTranslate(): void
+    public function test_translate(): void
     {
         $input = 'My string';
         $expectedTranslation = 'My string translated';
@@ -104,7 +106,7 @@ final class SimpleGoogleApiTranslatorTest extends TestCase
      *
      * @throws Exception
      */
-    public function testTranslateWhenExceptionOccurs(): void
+    public function test_translate_when_exception_occurs(): void
     {
         $input = 'A sentence.';
 

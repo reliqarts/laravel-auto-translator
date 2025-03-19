@@ -42,7 +42,7 @@ final class SimpleGoogleApiTranslator extends Translator
     public function translate(
         string $value,
         LanguageCode|string $targetLanguage,
-        LanguageCode $sourceLanguage = null
+        ?LanguageCode $sourceLanguage = null
     ): TranslationContract {
         try {
             $rawSourceLanguage = $sourceLanguage === null ? null : (string) $sourceLanguage;

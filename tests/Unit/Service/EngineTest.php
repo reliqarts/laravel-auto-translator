@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @noinspection PhpParamsInspection
  * @noinspection PhpUndefinedMethodInspection
@@ -85,7 +86,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslate(): void
+    public function test_translate(): void
     {
         $language = LanguageCode::from('es');
         $alreadyTranslated = [self::FOO => 'bar'];
@@ -127,7 +128,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslateWhenTranslatorNotConfigured(): void
+    public function test_translate_when_translator_not_configured(): void
     {
         $expectedExceptionMessage = 'A configuration error occurred';
 
@@ -159,7 +160,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslateWhenLanguageErrorOccurs(): void
+    public function test_translate_when_language_error_occurs(): void
     {
         $expectedExceptionMessage = 'Failed to read/write `es`';
 
@@ -189,7 +190,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslateWhenTranslatorTranslateFails(): void
+    public function test_translate_when_translator_translate_fails(): void
     {
         $language = LanguageCode::from('es');
         $originalText = 'Hello. Are you :your_name?';
@@ -236,7 +237,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslateAll(): void
+    public function test_translate_all(): void
     {
         $targetLanguages = ['es', 'not-valid', 'fr'];
         $originalTranslationsMap = ['hello' => 'hello'];
@@ -297,7 +298,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslateAllWhenTranslationFails(): void
+    public function test_translate_all_when_translation_fails(): void
     {
         $this->configProvider->get(ConfigProvider::KEY_TARGET_LANGUAGES)
             ->shouldBeCalledOnce()
@@ -330,7 +331,7 @@ final class EngineTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testTranslateAllWhenCriticalFailureOccurs(): void
+    public function test_translate_all_when_critical_failure_occurs(): void
     {
         $exceptionMessage = 'oops';
 
