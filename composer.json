@@ -39,13 +39,13 @@
         "orchestra/testbench": "^9.2 || ^10.0",
         "phpro/grumphp": "^2.0",
         "phpspec/prophecy-phpunit": "^2.0",
-        "phpunit/phpunit": "^9.6 || ^11.0",
+        "phpunit/phpunit": "^11.0",
         "yieldstudio/grumphp-laravel-pint": "^1.0"
     },
     "scripts": {
         "test": "phpunit",
-        "test:ci": "phpunit --coverage-clover=./build/coverage.xml",
-        "test:unit": "phpunit --testsuite=Unit --coverage-clover=./build/coverage.xml"
+        "test:ci": "phpunit --colors=auto --coverage-clover=build/coverage.xml",
+        "test:unit": "phpunit --testsuite=Unit --coverage-clover=build/coverage.xml"
     },
     "config": {
         "allow-plugins": {
